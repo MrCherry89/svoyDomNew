@@ -55,6 +55,17 @@ $(document).ready(function () {
     ],
   });
 
+  $(".popup-gallery").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+    },
+  });
+
   $(window).scroll(function () {
     var sticky = $(".top-scroll"),
       scroll = $(window).scrollTop();
