@@ -1614,6 +1614,12 @@
 }
 
 .apartments-wrap {
+  .pagination {
+    margin-top: 40px;
+    @media (max-width: 767px) {
+      @include justify-center;
+    }
+  }
   .wrapper {
     @include flex;
     @include dir-col;
@@ -2009,7 +2015,8 @@
           height: 50px;
         }
       }
-      a {
+      a,
+      button {
         border-radius: 10px;
         background: #f9f9f9;
         transition: 0.3s;
@@ -2035,6 +2042,14 @@
           border-color: #e4e4e4;
           background: #fff;
           color: #7a7a7a;
+          cursor: default;
+          &:hover {
+            background: #fff;
+            color: #7a7a7a;
+            span {
+              color: #7a7a7a;
+            }
+          }
         }
         span {
           font-weight: 500;
