@@ -64,6 +64,14 @@ $(document).ready(function () {
       enabled: true,
       navigateByImgClick: true,
     },
+    callbacks: {
+      open: function () {
+        $("html").css("overflow", "hidden");
+      },
+      close: function () {
+        $("html").css("overflow", "auto");
+      },
+    },
   });
 
   $(".popup-gallery2").magnificPopup({
@@ -74,6 +82,14 @@ $(document).ready(function () {
     gallery: {
       enabled: true,
       navigateByImgClick: true,
+    },
+    callbacks: {
+      open: function () {
+        $("html").css("overflow", "hidden");
+      },
+      close: function () {
+        $("html").css("overflow", "auto");
+      },
     },
   });
 
