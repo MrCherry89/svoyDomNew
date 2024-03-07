@@ -775,6 +775,48 @@ a:focus {
   margin: 0;
 }
 
+body.mfp-open {
+  overflow: hidden !important;
+}
+
+.checkbox-wrap label {
+  cursor: pointer;
+}
+.checkbox-wrap label input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+.checkbox-wrap label span {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 10px;
+  min-width: 50px;
+  border: 1px solid #e4e4e4;
+  font-size: 16px;
+  color: #4f4f4f;
+  text-align: center;
+  transition: 0.3s;
+}
+.checkbox-wrap label input:checked ~ span {
+  border-color: #0e6131;
+  background: #0e6131;
+  color: white;
+}
+
 .radio-wrap input[type=radio] {
   display: none;
 }
@@ -3788,15 +3830,15 @@ a:focus {
   color: #4f4f4f;
   display: inline-block;
 }
-.apartment-search-info form .info .radios {
+.apartment-search-info form .info .checkboxes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.apartment-search-info form .info .radios .radio-wrap {
+.apartment-search-info form .info .checkboxes .checkbox-wrap {
   margin-right: 12px;
 }
-.apartment-search-info form .info .radios .radio-wrap:last-child {
+.apartment-search-info form .info .checkboxes .checkbox-wrap:last-child {
   margin-right: 0;
 }
 .apartment-search-info form > a {

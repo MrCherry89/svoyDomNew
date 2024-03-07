@@ -687,6 +687,46 @@ a {
   margin: 0;
 }
 
+body.mfp-open {
+  overflow: hidden !important;
+}
+
+.checkbox-wrap {
+  label {
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+    span {
+      width: 50px;
+      height: 50px;
+      @include flex;
+      @include align-center;
+      @include justify-center;
+      border-radius: 10px;
+      min-width: 50px;
+      border: 1px solid #e4e4e4;
+      font-size: 16px;
+      color: #4f4f4f;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    input:checked ~ span {
+      border-color: $green;
+      background: $green;
+      color: white;
+    }
+  }
+}
+
 .radio-wrap {
   input[type="radio"] {
     display: none;

@@ -1093,9 +1093,9 @@
         color: #4f4f4f;
         display: inline-block;
       }
-      .radios {
+      .checkboxes {
         @include flex;
-        .radio-wrap {
+        .checkbox-wrap {
           margin-right: 12px;
           &:last-child {
             margin-right: 0;
@@ -3053,6 +3053,8 @@
   margin-top: 80px;
   @media (max-width: 767px) {
     margin-top: 50px;
+  }
+  .swiper-pagination {
   }
   .wrapper {
     .title-wrapper {
