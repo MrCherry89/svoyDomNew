@@ -180,7 +180,7 @@
                       />
                     </div>
                   </div>
-                  <div id="range-slider-3"></div>
+                  <div id="range-slider-3" class="range-slider"></div>
                 </div>
               </div>
               <div class="info">
@@ -190,7 +190,7 @@
                     <div class="input-wrap">
                       от
                       <input
-                        type="number"
+                        type="text"
                         min="0"
                         max="200"
                         step="1"
@@ -201,7 +201,7 @@
                     <div class="input-wrap">
                       до
                       <input
-                        type="number"
+                        type="text"
                         min="0"
                         max="200"
                         step="1"
@@ -210,7 +210,7 @@
                       м<sup>2</sup>
                     </div>
                   </div>
-                  <div id="range-slider-1"></div>
+                  <div id="range-slider-1" class="range-slider"></div>
                 </div>
               </div>
               <div class="info full">
@@ -220,9 +220,9 @@
                     <div class="input-wrap">
                       от
                       <input
-                        type="number"
+                        type="text"
                         min="0"
-                        max="100000"
+                        max="1000000"
                         step="1"
                         id="input2-1"
                       />
@@ -231,16 +231,16 @@
                     <div class="input-wrap">
                       до
                       <input
-                        type="number"
+                        type="text"
                         min="0"
-                        max="100000"
+                        max="1000000"
                         step="1"
                         id="input2-2"
                       />
                       ₸
                     </div>
                   </div>
-                  <div id="range-slider-2"></div>
+                  <div id="range-slider-2" class="range-slider"></div>
                 </div>
               </div>
             </div>
@@ -269,9 +269,9 @@
                           <div class="input-wrap">
                             от
                             <input
-                              type="number"
+                              type="text"
                               min="0"
-                              max="100000"
+                              max="1000000"
                               step="1"
                               id="input4-1"
                             />
@@ -280,16 +280,16 @@
                           <div class="input-wrap">
                             до
                             <input
-                              type="number"
+                              type="text"
                               min="0"
-                              max="100000"
+                              max="1000000"
                               step="1"
                               id="input4-2"
                             />
                             ₸
                           </div>
                         </div>
-                        <div id="range-slider-4"></div>
+                        <div id="range-slider-4" class="range-slider"></div>
                       </div>
                     </div>
                   </div>
@@ -2040,6 +2040,7 @@
     <script src="js/aos.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/jquery.smooth-scroll.min.js"></script>
+    <script src="js/wNumb.min.js"></script>
     <script src="js/script.js"></script>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
@@ -2255,121 +2256,171 @@
     </script>
 
     <script>
-      // RangeSlider 1 - start
-      var rangeSlider_1 = document.getElementById("range-slider-1");
-      var input1_1 = document.getElementById("input1-1");
-      var input1_2 = document.getElementById("input1-2");
-      var inputs_1 = [input1_1, input1_2];
-
-      noUiSlider.create(rangeSlider_1, {
-        start: [0, 200],
-        connect: true,
-        range: {
-          min: 0,
-          max: 200,
-        },
-        format: {
-          to: (v) => v | 0,
-          from: (v) => v | 0,
-        },
-      });
-
-      rangeSlider_1.noUiSlider.on("update", function (values, handle) {
-        inputs_1[handle].value = values[handle];
-      });
-
-      inputs_1.forEach(function (input, handle) {
-        input.addEventListener("change", function () {
-          rangeSlider_1.noUiSlider.setHandle(handle, this.value);
+        const moneyFormat = wNumb({
+            thousand: ' ',
+            decimals: 0,
         });
-      });
-      // RangeSlider 1 - end
 
-      // RangeSlider 2 - start
-      var rangeSlider_2 = document.getElementById("range-slider-2");
-      var input2_1 = document.getElementById("input2-1");
-      var input2_2 = document.getElementById("input2-2");
-      var inputs_2 = [input2_1, input2_2];
+        const InputsCounts = document.querySelectorAll('.range-info input');
+        const InputsRange = document.querySelectorAll('.range-info .range-slider');
 
-      noUiSlider.create(rangeSlider_2, {
-        start: [0, 1000000],
-        connect: true,
-        range: {
-          min: 0,
-          max: 1000000,
-        },
-        format: {
-          to: (v) => v | 0,
-          from: (v) => v | 0,
-        },
-      });
+        const groupPairs = arr =>
+            arr.reduce((acc, _, i) => (i % 2 ? acc : [...acc, arr.slice(i, i + 2)]), []);
+        const validateInput = (input) => /^\d+$/.test(input);
 
-      rangeSlider_2.noUiSlider.on("update", function (values, handle) {
-        inputs_2[handle].value = values[handle];
-      });
+        InputsCounts.forEach((item) => {
+            item.addEventListener('keydown', function (e){
+                if(!validateInput(e.key)){
+                    e.preventDefault();
+                }
+            })
+        })
 
-      inputs_2.forEach(function (input, handle) {
-        input.addEventListener("change", function () {
-          rangeSlider_2.noUiSlider.setHandle(handle, this.value);
-        });
-      });
-      // RangeSlider 2 - end
+        groupPairs([...InputsCounts]).forEach((item, index) => {
 
-      var rangeSlider_3 = document.getElementById("range-slider-3");
-      var input3_1 = document.getElementById("input3-1");
-      var input3_2 = document.getElementById("input3-2");
-      var inputs_3 = [input3_1, input3_2];
+            const rangeSlider = InputsRange[index];
 
-      noUiSlider.create(rangeSlider_3, {
-        start: [1, 12],
-        connect: true,
-        range: {
-          min: 0,
-          max: 12,
-        },
-        format: {
-          to: (v) => v | 0,
-          from: (v) => v | 0,
-        },
-      });
+           const { min, max } = {
+               min: +$(item[0]).attr('min'),
+               max: +$(item[1]).attr('max')
+           }
 
-      rangeSlider_3.noUiSlider.on("update", function (values, handle) {
-        inputs_3[handle].value = values[handle];
-      });
+            noUiSlider.create(InputsRange[index], {
+                start: [min, max],
+                connect: true,
+                range: { min, max, },
+                format: {
+                    to: (v) => v | 0,
+                    from: (v) => v | 0,
+                },
+            });
 
-      inputs_3.forEach(function (input, handle) {
-        input.addEventListener("change", function () {
-          rangeSlider_3.noUiSlider.setHandle(handle, this.value);
-        });
-      });
+            rangeSlider.noUiSlider.on("update", function (values, handle) {
+                item[handle].value = moneyFormat.to(values[handle]);
+            });
 
-      var rangeSlider_4 = document.getElementById("range-slider-4");
-      var input4_1 = document.getElementById("input4-1");
-      var input4_2 = document.getElementById("input4-2");
-      var inputs_4 = [input4_1, input4_2];
+            item.forEach(function (input, handle) {
+                input.addEventListener("change", function () {
+                    InputsRange[index].noUiSlider.setHandle(handle, this.value);
+                });
+            });
+        })
 
-      noUiSlider.create(rangeSlider_4, {
-        start: [0, 1000000],
-        connect: true,
-        range: {
-          min: 0,
-          max: 1000000,
-        },
-        format: {
-          to: (v) => v | 0,
-          from: (v) => v | 0,
-        },
-      });
-
-      rangeSlider_4.noUiSlider.on("update", function (values, handle) {
-        inputs_4[handle].value = values[handle];
-      });
-
-      inputs_4.forEach(function (input, handle) {
-        input.addEventListener("change", function () {
-          rangeSlider_4.noUiSlider.setHandle(handle, this.value);
-        });
-      });
+      // // RangeSlider 1 - start
+      // const rangeSlider_1 = document.getElementById("range-slider-1");
+      // const input1_1 = document.getElementById("input1-1");
+      // const input1_2 = document.getElementById("input1-2");
+      // const inputs_1 = [input1_1, input1_2];
+      //
+      // noUiSlider.create(rangeSlider_1, {
+      //   start: [0, 200],
+      //   connect: true,
+      //   range: {
+      //     min: 0,
+      //     max: 200,
+      //   },
+      //   format: {
+      //     to: (v) => v | 0,
+      //     from: (v) => v | 0,
+      //   },
+      // });
+      //
+      // rangeSlider_1.noUiSlider.on("update", function (values, handle) {
+      //   inputs_1[handle].value = +moneyFormat.to(values[handle]);
+      // });
+      //
+      // inputs_1.forEach(function (input, handle) {
+      //   input.addEventListener("change", function () {
+      //     rangeSlider_1.noUiSlider.setHandle(handle, this.value);
+      //   });
+      // });
+      // // RangeSlider 1 - end
+      //
+      // // RangeSlider 2 - start
+      // const rangeSlider_2 = document.getElementById("range-slider-2");
+      // const input2_1 = document.getElementById("input2-1");
+      // const input2_2 = document.getElementById("input2-2");
+      // const inputs_2 = [input2_1, input2_2];
+      //
+      // noUiSlider.create(rangeSlider_2, {
+      //   start: [0, 10000000],
+      //   connect: true,
+      //   range: {
+      //     min: 0,
+      //     max: 1000000,
+      //   },
+      //   format: {
+      //     to: (v) => v | 0,
+      //     from: (v) => v | 0,
+      //   },
+      // });
+      //
+      // rangeSlider_2.noUiSlider.on("update", function (values, handle) {
+      //   inputs_2[handle].value = moneyFormat.to(values[handle]);
+      // });
+      //
+      // inputs_2.forEach(function (input, handle) {
+      //   input.addEventListener("change", function () {
+      //     rangeSlider_2.noUiSlider.setHandle(handle, this.value);
+      //   });
+      // });
+      // // RangeSlider 2 - end
+      //
+      // const rangeSlider_3 = document.getElementById("range-slider-3");
+      // const input3_1 = document.getElementById("input3-1");
+      // const input3_2 = document.getElementById("input3-2");
+      // const inputs_3 = [input3_1, input3_2];
+      //
+      // noUiSlider.create(rangeSlider_3, {
+      //   start: [1, 12],
+      //   connect: true,
+      //   range: {
+      //     min: 0,
+      //     max: 12,
+      //   },
+      //   format: {
+      //     to: (v) => v | 0,
+      //     from: (v) => v | 0,
+      //   },
+      // });
+      //
+      // rangeSlider_3.noUiSlider.on("update", function (values, handle) {
+      //   inputs_3[handle].value = +moneyFormat.to(values[handle]);
+      // });
+      //
+      // inputs_3.forEach(function (input, handle) {
+      //   input.addEventListener("change", function () {
+      //     rangeSlider_3.noUiSlider.setHandle(handle, this.value);
+      //   });
+      // });
+      //
+      // const rangeSlider_4 = document.getElementById("range-slider-4");
+      // const input4_1 = document.getElementById("input4-1");
+      // const input4_2 = document.getElementById("input4-2");
+      // const inputs_4 = [input4_1, input4_2];
+      //
+      // noUiSlider.create(rangeSlider_4, {
+      //   start: [0, 1000000],
+      //   connect: true,
+      //   range: {
+      //     min: 0,
+      //     max: 1000000,
+      //   },
+      //   format: {
+      //     to: (v) => v | 0,
+      //     from: (v) => v | 0,
+      //   },
+      // });
+      //
+      // rangeSlider_4.noUiSlider.on("update", function (values, handle) {
+      //   inputs_4[handle].value = +moneyFormat.to(values[handle]);
+      // });
+      //
+      // inputs_4.forEach(function (input, handle) {
+      //   input.addEventListener("change", function () {
+      //     rangeSlider_4.noUiSlider.setHandle(handle, this.value);
+      //   });
+      // });
     </script>
   </body>
 </html>

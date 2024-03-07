@@ -905,23 +905,19 @@ body.mfp-open {
   margin: 0 5px;
   width: 29px;
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
 }
 .range-info .inputs .input-wrap input::-webkit-input-placeholder {
   color: #141414;
-  font-size: 16px;
 }
 .range-info .inputs .input-wrap input::-moz-placeholder {
   color: #141414;
-  font-size: 16px;
 }
 .range-info .inputs .input-wrap input:-ms-input-placeholder {
   color: #141414;
-  font-size: 16px;
 }
 .range-info .inputs .input-wrap input:-moz-placeholder {
   color: #141414;
-  font-size: 16px;
 }
 .range-info.full {
   min-width: 280px;
