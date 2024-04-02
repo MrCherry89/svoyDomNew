@@ -752,6 +752,51 @@ body.mfp-open {
   }
 }
 
+.radio-wrap2 {
+  input[type="radio"] {
+    display: none;
+  }
+
+  input:checked + label {
+    color: #141414;
+    .icon {
+      border-color: $green;
+      &:after {
+        background: $green;
+      }
+    }
+  }
+
+  label {
+    @include flex;
+    @include align-center;
+    color: #4f4f4f;
+    font-size: 16px;
+    cursor: pointer;
+    .icon {
+      border-radius: 50%;
+      margin-right: 10px;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #cecece;
+      transition: 0.3s;
+      position: relative;
+      &:after {
+        content: "";
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background: transparent;
+        transition: 0.3s;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
 .range-info {
   position: relative;
   z-index: 0;

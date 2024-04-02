@@ -1827,7 +1827,7 @@
     }
     .apartment-search-info {
       position: relative;
-      z-index: 0;
+      z-index: 1;
       .grey-btn {
         margin-right: 10px;
         @media (max-width: 767px) {
@@ -1944,6 +1944,132 @@
   }
 }
 
+.rooms-blocks {
+  @include flex;
+  @include justify-between;
+  @include flex-wrap;
+  @media (max-width: 1400px) {
+    @include dir-col;
+  }
+  .rooms-block {
+    margin-bottom: 30px;
+    @media (max-width: 767px) {
+      width: 100%;
+      overflow: hidden;
+      overflow-x: auto;
+    }
+  }
+}
+
+.radio-wrapper {
+  min-width: 180px;
+  position: relative;
+  z-index: 1;
+  .bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    top: calc(100% + 10px);
+    border-radius: 10px;
+    background: white;
+    padding: 20px 15px;
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
+    -webkit-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
+    display: none;
+    &.open {
+      display: block;
+    }
+    .radio-wrap2 {
+      margin-bottom: 20px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .top {
+    @include flex;
+    @include align-center;
+    @include justify-between;
+    padding: 0 15px;
+    height: 50px;
+    border: 1px solid #e4e4e4;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.2s;
+    .icon {
+      background: url(../img/arrow.svg) no-repeat center center;
+      width: 6px !important;
+      height: 7px !important;
+      border: none !important;
+      transition: 0.2s;
+      .active {
+        background: url(../img/arrow-green.svg) no-repeat center center !important;
+      }
+    }
+    &:hover {
+      border-color: #c7c7c7;
+      .icon {
+        background: url(../img/arrow-green.svg) no-repeat center center !important;
+      }
+    }
+  }
+}
+
+.contact-details-wrap {
+  margin: 40px 0;
+}
+
+.contact-details {
+  border-radius: 12px;
+  background: white;
+  padding: 40px;
+  box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
+  max-width: 450px;
+  width: 100%;
+  @media (max-width: 767px) {
+    padding: 30px 20px;
+  }
+}
+
+.contact-details-form {
+  width: 100%;
+  @include dir-col;
+  @include flex;
+  margin-top: 40px;
+  @media (max-width: 767px) {
+    margin-top: 30px;
+  }
+  p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #4f4f4f;
+  }
+  input {
+    height: 50px;
+    width: 100%;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    padding: 0 15px;
+    border: 1px solid #e4e4e4;
+    color: #4f4f4f;
+    font-size: 16px;
+    @include placeholder {
+      color: #4f4f4f;
+      font-size: 16px;
+    }
+  }
+  button {
+    height: 50px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+
 .rooms-wrapper {
   h3 {
     margin-bottom: 20px;
@@ -1965,9 +2091,7 @@
     height: auto;
   }
   @media (max-width: 767px) {
-    width: 100%;
-    overflow: hidden;
-    overflow-x: auto;
+    width: auto;
   }
   &::-webkit-scrollbar {
     width: 6px;

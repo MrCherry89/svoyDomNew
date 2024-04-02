@@ -432,5 +432,18 @@ $(document).ready(function () {
     mainClass: "mfp-fade",
   });
 
+  $(".radio-wrapper .top").on("click", function (e) {
+    e.stopPropagation();
+    $(this).closest(".radio-wrapper").find(".bottom").toggleClass("open");
+  });
+
+  $(".bottom").on("click", function (e) {
+    e.stopPropagation();
+  });
+
+  $(document).on("click", function () {
+    $(".bottom").removeClass("open");
+  });
+
   AOS.init();
 });
