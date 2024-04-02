@@ -2017,8 +2017,10 @@
   }
 }
 
-.contact-details-wrap {
-  margin: 40px 0;
+#contact-details-popup {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .contact-details {
@@ -2028,7 +2030,6 @@
   box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
   -webkit-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
   -moz-box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.11);
-  max-width: 450px;
   width: 100%;
   @media (max-width: 767px) {
     padding: 30px 20px;

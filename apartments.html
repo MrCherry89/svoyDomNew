@@ -2470,27 +2470,6 @@
       </div>
     </div>
 
-    <div class="contact-details-wrap">
-      <div class="wrapper">
-        <div class="contact-details">
-          <a href="index.html" class="logo">
-            <img src="img/logo.svg" alt="" />
-          </a>
-          <form class="contact-details-form">
-            <p>Введите ваши данные для связи</p>
-            <input type="text" placeholder="Ваше имя" />
-            <input
-              type="text"
-              placeholder="Номер телефона"
-              class="phone-number-input"
-            />
-            <input type="text" placeholder="Название ЖК" />
-            <button type="button" class="green-btn">Продолжить</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
     <div class="contact-us">
       <div class="wrapper">
         <div class="title-wrap">
@@ -2533,7 +2512,9 @@
                 <button class="green-btn" type="button">Оставить заявку</button>
                 <p>
                   Нажимая кнопку “отправить” вы соглашаетесь с
-                  <a href="#"> политикой обработки данных</a>
+                  <a href="#contact-details-popup" class="popup">
+                    политикой обработки данных</a
+                  >
                 </p>
               </div>
             </form>
@@ -2794,6 +2775,31 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="contact-details-popup"
+      class="mfp-hide white-popup mfp-with-anim main-popup"
+    >
+      <div class="popup-body">
+        <button title="Close (Esc)" type="button" class="mfp-close"></button>
+        <div class="contact-details">
+          <a href="index.html" class="logo">
+            <img src="img/logo.svg" alt="" />
+          </a>
+          <form class="contact-details-form">
+            <p>Введите ваши данные для связи</p>
+            <input type="text" placeholder="Ваше имя" />
+            <input
+              type="text"
+              placeholder="Номер телефона"
+              class="phone-number-input"
+            />
+            <input type="text" placeholder="Название ЖК" />
+            <button type="button" class="green-btn">Продолжить</button>
+          </form>
         </div>
       </div>
     </div>
