@@ -3040,7 +3040,7 @@ body.mfp-open {
     }
   }
   &.location-qaiyndy {
-    padding: 50px 0;
+    padding: 40px 0;
     background: #344532;
     .location-top-info {
       background: none !important;
@@ -3064,6 +3064,17 @@ body.mfp-open {
         p {
           color: white;
         }
+      }
+    }
+    .location-items {
+      @include justify-between;
+      margin-top: -50px;
+    }
+    .img-wrap {
+      width: 50px;
+      height: 50px;
+      img {
+        width: 100%;
       }
     }
   }
@@ -3564,11 +3575,30 @@ body.mfp-open {
       @include flex;
       border-radius: 10px;
       overflow: hidden;
-      margin: 0 10px;
+      margin: 0px 10px;
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+      }
+      &.slick-center {
+      }
+    }
+  }
+  .gallery-slider,
+  .gallery-slider2 {
+    .item {
+      margin: 50px 10px;
+      border-radius: 10px;
+      transition: 0.5s;
+      @media (max-width: 767px) {
+        width: 220px;
+      }
+      &.slick-center {
+        transform: scale(1.2);
+        img {
+          border-radius: 10px;
+        }
       }
     }
   }
@@ -3633,8 +3663,9 @@ body.mfp-open {
         border-radius: 10px;
         overflow: hidden;
         margin: 15px 0;
+        opacity: 0.5;
         @media (max-width: 767px) {
-          margin: 0 5px;
+          margin: 0 10px;
           height: auto;
           border-radius: 8px;
         }
@@ -3642,6 +3673,9 @@ body.mfp-open {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+        &.slick-current {
+          opacity: 1;
         }
       }
     }
@@ -3674,7 +3708,7 @@ body.mfp-open {
     .right {
       width: calc(100% - 250px);
       background: white;
-      padding: 70px 50px 150px;
+      padding: 70px 50px 100px;
       border-radius: 10px;
       position: relative;
       z-index: 0;
@@ -3689,8 +3723,8 @@ body.mfp-open {
       .slider-navigation {
         @include flex;
         position: absolute;
-        bottom: 100px;
-        right: 50px;
+        bottom: 50px;
+        right: 60px;
         z-index: 10;
         min-width: 100px;
         padding: 10px 15px;
@@ -3818,6 +3852,9 @@ body.mfp-open {
 
 .qaiyndy-map {
   margin: 50px 0;
+  @media (max-width: 1024px) {
+    margin-top: 80px;
+  }
   #map {
     width: 100%;
     height: 470px;
@@ -3870,11 +3907,12 @@ body.mfp-open {
     padding: 20px 130px;
     border: 1px solid #ccc;
     margin-top: -1px;
-    opacity: 0.5;
     border-radius: 15px;
     background: #fff;
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
     margin-bottom: 15px;
+    display: none;
+    animation: mymove 1s;
     @media (max-width: 1024px) {
       padding: 20px;
     }
@@ -3926,7 +3964,6 @@ body.mfp-open {
 
   .tab-content.active {
     display: block;
-    opacity: 1;
   }
 }
 
@@ -3939,6 +3976,21 @@ body.mfp-open {
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
+      position: relative;
+      z-index: 0;
+      &:after {
+        content: "";
+        width: 100%;
+        height: 800px;
+        position: absolute;
+        bottom: -200px;
+        left: 0;
+        z-index: -1;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+        @media (max-width: 1024px) {
+          bottom: -250px;
+        }
+      }
       @media (max-width: 1920px) {
         height: 40vw;
       }
