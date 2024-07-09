@@ -4838,7 +4838,7 @@ body.mfp-open {
 }
 
 .qaiyndy-banner .qaiyndy-banner-slider .item {
-  height: 1000px;
+  height: 800px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4849,7 +4849,7 @@ body.mfp-open {
 }
 @media (max-width: 1920px) {
   .qaiyndy-banner .qaiyndy-banner-slider .item {
-    height: 50vw;
+    height: 40vw;
   }
 }
 @media (max-width: 1024px) {

@@ -3933,14 +3933,14 @@ body.mfp-open {
 .qaiyndy-banner {
   .qaiyndy-banner-slider {
     .item {
-      height: 1000px;
+      height: 800px;
       width: 100%;
       @include flex;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
       @media (max-width: 1920px) {
-        height: 50vw;
+        height: 40vw;
       }
       @media (max-width: 1024px) {
         height: 100vw;
