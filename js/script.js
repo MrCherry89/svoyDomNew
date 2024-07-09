@@ -445,5 +445,212 @@ $(document).ready(function () {
     $(".bottom").removeClass("open");
   });
 
+  // новый скрипт
+
+  $(".banner-slider2").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 900,
+    fade: true,
+    cssEase: "linear",
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $(".banner-slider-wrap2 .slider-navigation .slick-prev"),
+    nextArrow: $(".banner-slider-wrap2 .slider-navigation .slick-next"),
+  });
+
+  $(".gallery-slider").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    prevArrow: $(".gallery-slider-wrap .slider-navigation .slick-prev"),
+    nextArrow: $(".gallery-slider-wrap .slider-navigation .slick-next"),
+    centerMode: true,
+    speed: 700,
+    cssEase: "ease-in-out",
+    variableWidth: true,
+  });
+
+  $(".gallery-slider2").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    prevArrow: $(".gallery-slider-wrap2 .slider-navigation .slick-prev"),
+    nextArrow: $(".gallery-slider-wrap2 .slider-navigation .slick-next"),
+    centerMode: true,
+    speed: 700,
+    cssEase: "ease-in-out",
+    variableWidth: true,
+  });
+
+  $(".gallery-slider3").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    prevArrow: $(".gallery-slider-wrap3 .slider-navigation .slick-prev"),
+    nextArrow: $(".gallery-slider-wrap3 .slider-navigation .slick-next"),
+    centerMode: true,
+    speed: 700,
+    cssEase: "ease-in-out",
+    variableWidth: true,
+  });
+
+  $(".qaiyndy-banner-slider").slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    fade: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 900,
+  });
+
+  $(".slider-for").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    asNavFor: ".slider-nav",
+    prevArrow: $(".planning-solutions-wrap .slider-navigation .slick-prev"),
+    nextArrow: $(".planning-solutions-wrap .slider-navigation .slick-next"),
+  });
+  $(".slider-nav").slick({
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: ".slider-for",
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+    vertical: true,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          vertical: false,
+          slidesToShow: 3,
+        },
+      },
+    ],
+  });
+
+  $(".tab").on("click", function () {
+    var tabId = $(this).data("tab");
+
+    $(".tab").removeClass("active");
+    $(this).addClass("active");
+
+    $(".tab-content").removeClass("active");
+    $('.tab-content[data-content="' + tabId + '"]').addClass("active");
+  });
+
+  // Устанавливаем активную первую вкладку по умолчанию
+  $(".tab:first").addClass("active");
+  $(".tab-content:first").addClass("active");
+
+  const tabButtons = document.querySelectorAll(".tab-button");
+  const tabPanes = document.querySelectorAll(".tab-pane");
+
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetTab = button.getAttribute("data-tab");
+
+      tabButtons.forEach((btn) => btn.classList.remove("active"));
+      tabPanes.forEach((pane) => {
+        pane.classList.remove("active");
+        pane.classList.remove("fade-in");
+      });
+
+      button.classList.add("active");
+      document.getElementById(targetTab).classList.add("active", "fade-in");
+    });
+  });
+
+  $(".layouts-slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
+    centerMode: true,
+    speed: 1000,
+    focusOnSelect: true,
+    centerPadding: "40px",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  $(".images-slider3").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 900,
+    fade: true,
+    cssEase: "linear",
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $(".images-slider-wrap3 .slider-navigation .slick-prev"),
+    nextArrow: $(".images-slider-wrap3 .slider-navigation .slick-next"),
+  });
+
+  $(".popup-gallery").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1],
+    },
+  });
+
+  $(".popup-gallery2").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1],
+    },
+  });
+
+  $(".popup-layouts").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1],
+    },
+  });
+
   AOS.init();
 });
