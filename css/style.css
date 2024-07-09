@@ -4934,9 +4934,19 @@ body.mfp-open {
   background: #344532;
   color: white;
 }
+.qaiyndy-banner .wrapper2 .buttons a.white:hover {
+  background: white;
+  color: #344532;
+}
 .qaiyndy-banner .wrapper2 .buttons a.green {
   background: white;
   color: #344532;
+  border: 1px solid transparent;
+}
+.qaiyndy-banner .wrapper2 .buttons a.green:hover {
+  background: #344532;
+  color: #fff;
+  border-color: white;
 }
 
 .footer {

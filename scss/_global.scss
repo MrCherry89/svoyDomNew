@@ -3992,10 +3992,20 @@ body.mfp-open {
         &.white {
           background: #344532;
           color: white;
+          &:hover {
+            background: white;
+            color: #344532;
+          }
         }
         &.green {
           background: white;
           color: #344532;
+          border: 1px solid transparent;
+          &:hover {
+            background: #344532;
+            color: #fff;
+            border-color: white;
+          }
         }
       }
     }
