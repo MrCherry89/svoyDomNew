@@ -3179,8 +3179,6 @@
   @media (max-width: 767px) {
     margin-top: 50px;
   }
-  .swiper-pagination {
-  }
   .wrapper {
     .title-wrapper {
       @include flex;
@@ -3717,4 +3715,170 @@
 
 .swiper-div {
   width: 100%;
+}
+
+.swiper-div2 {
+  .swiper-container {
+    position: relative;
+    z-index: 0;
+    .swiper-button-prev,
+    .swiper-button-next {
+      border-radius: 50%;
+      width: 90px;
+      height: 90px;
+      background: #fff;
+      @include flex;
+      z-index: 10;
+      position: absolute;
+      transition: 0.3s;
+      top: 50%;
+      transform: translateY(-50%);
+      @media (max-width: 1024px) {
+        width: 60px;
+        height: 60px;
+      }
+      &:before {
+        content: none;
+      }
+      img {
+        margin: auto;
+        @media (max-width: 1024px) {
+          width: 34px;
+        }
+      }
+      &:after {
+        content: none;
+      }
+      &:before {
+        content: none;
+      }
+      &.swiper-button-prev {
+        img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .swiper-button-next {
+      right: -20px;
+    }
+    .swiper-button-prev {
+      left: -20px;
+    }
+  }
+  .swiper-slide {
+    width: 400px;
+    height: 470px;
+    background: #117169;
+    padding: 15px;
+    margin: 0 10px;
+    @media (max-width: 767px) {
+      width: 220px;
+      height: 240px;
+    }
+    > p {
+      font-weight: 300;
+      font-size: 16px;
+      color: white;
+      b {
+        font-weight: bold;
+        color: white;
+      }
+    }
+    .icon-wrap {
+      @include flex;
+      @include align-center;
+      margin-bottom: 20px;
+      span {
+        font-weight: bold;
+        color: white;
+        font-size: 24px;
+        @media (max-width: 767px) {
+          font-size: 18px;
+        }
+      }
+      .icon {
+        background: white;
+        border-radius: 8px;
+        @include flex;
+        margin-right: 15px;
+        padding: 15px;
+        @media (max-width: 767px) {
+          padding: 10px;
+        }
+        img {
+          margin: auto;
+          width: 40px;
+          @media (max-width: 767px) {
+            width: 20px;
+          }
+        }
+      }
+    }
+    .img-wrap {
+      @include flex;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      @media (max-width: 767px) {
+        display: none;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .swiper-slide.swiper-slide-active {
+    width: 450px;
+    height: 530px;
+    @media (max-width: 767px) {
+      width: 280px;
+      height: 300px;
+    }
+  }
+}
+
+.location-olen {
+  background: #117169 !important;
+}
+
+.main-slider-wrap,
+.main-slider-wrap2 {
+  .wrapper2 {
+    position: relative;
+    z-index: 0;
+    .olen-slider-navigation {
+      button {
+        background: white;
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+        }
+        &.slick-prev {
+          left: 30px;
+        }
+        &.slick-next {
+          right: 30px;
+        }
+      }
+    }
+    .main-slider,
+    .main-slider2 {
+      .item {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 470px;
+        @media (max-width: 767px) {
+          min-height: 55vw;
+        }
+        img {
+          width: 100%;
+          @media (max-width: 767px) {
+            height: 100%;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
 }

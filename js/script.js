@@ -105,6 +105,10 @@ $(document).ready(function () {
     speed: 1000,
   });
 
+  $(".white-btn-olen").smoothScroll({
+    speed: 1000,
+  });
+
   $(".images-slider2").slick({
     dots: false,
     arrows: true,
@@ -483,6 +487,38 @@ $(document).ready(function () {
     ],
   });
 
+  $(".main-slider").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $(
+      ".main-slider-wrap .wrapper2 .olen-slider-navigation .slick-prev"
+    ),
+    nextArrow: $(
+      ".main-slider-wrap .wrapper2 .olen-slider-navigation .slick-next"
+    ),
+    speed: 700,
+    cssEase: "ease-in-out",
+  });
+
+  $(".main-slider2").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $(
+      ".main-slider-wrap2 .wrapper2 .olen-slider-navigation .slick-prev"
+    ),
+    nextArrow: $(
+      ".main-slider-wrap2 .wrapper2 .olen-slider-navigation .slick-next"
+    ),
+    speed: 700,
+    cssEase: "ease-in-out",
+  });
+
   $(".gallery-slider2").slick({
     dots: false,
     arrows: true,
@@ -582,6 +618,56 @@ $(document).ready(function () {
         },
       },
     ],
+  });
+
+  $(".slider-for2").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    asNavFor: ".slider-nav2",
+    focusOnSelect: true,
+    prevArrow: $(
+      ".planning-solutions-wrap .olen-slider-navigation .slick-prev"
+    ),
+    nextArrow: $(
+      ".planning-solutions-wrap .olen-slider-navigation .slick-next"
+    ),
+  });
+  $(".slider-nav2").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: ".slider-for2",
+    dots: false,
+    arrows: false,
+    centerMode: true,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+          focusOnSelect: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          centerMode: true,
+          slidesToShow: 2,
+          focusOnSelect: true,
+        },
+      },
+    ],
+  });
+
+  $(".olen-info-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    speed: 700,
+    cssEase: "ease-in-out",
+    prevArrow: $(".olen-info-slider-wrap .olen-slider-navigation .slick-prev"),
+    nextArrow: $(".olen-info-slider-wrap .olen-slider-navigation .slick-next"),
   });
 
   $(".tab").on("click", function () {
