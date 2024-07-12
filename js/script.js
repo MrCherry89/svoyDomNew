@@ -557,6 +557,30 @@ $(document).ready(function () {
     slideToClickedSlide: true,
   });
 
+  var swiper = new Swiper(".swiper-container", {
+    slidesPerView: 1,
+    centeredSlides: false,
+    spaceBetween: 0,
+    loop: true,
+    speed: 1000,
+    centeredSlides: true,
+    centeredSlidesBounds: false,
+    slideToClickedSlide: false,
+    breakpoints: {
+      // when window width is <= 767px
+      767: {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        centeredSlidesBounds: true,
+        slideToClickedSlide: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      },
+    },
+  });
+
   $(".gallery-slider3").slick({
     dots: false,
     arrows: true,
