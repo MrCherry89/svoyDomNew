@@ -4856,7 +4856,7 @@ body.mfp-open {
 }
 .planning-solutions.planning-solutions2 .planning-solutions-wrap .right {
   width: 100%;
-  padding: 70px 120px 100px;
+  padding: 70px 120px 50px;
 }
 @media (max-width: 767px) {
   .planning-solutions.planning-solutions2 .planning-solutions-wrap .right {
@@ -5540,6 +5540,12 @@ body.mfp-open {
     left: -15px;
   }
 }
+.olen-info-slider-wrap .olen-info-slider:hover .item:before {
+  opacity: 1;
+}
+.olen-info-slider-wrap .olen-info-slider:hover .item .hide-info {
+  opacity: 1;
+}
 .olen-info-slider-wrap .olen-info-slider .item {
   background-size: cover;
   background-repeat: no-repeat;
@@ -5628,12 +5634,6 @@ body.mfp-open {
   .olen-info-slider-wrap .olen-info-slider .item .hide-info p {
     font-size: 20px;
   }
-}
-.olen-info-slider-wrap .olen-info-slider .item:hover:before {
-  opacity: 1;
-}
-.olen-info-slider-wrap .olen-info-slider .item:hover .hide-info {
-  opacity: 1;
 }
 
 .olen-slider-navigation button {

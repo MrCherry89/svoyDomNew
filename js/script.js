@@ -665,6 +665,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     arrows: true,
     speed: 700,
+    fade: true,
     cssEase: "ease-in-out",
     prevArrow: $(".olen-info-slider-wrap .olen-slider-navigation .slick-prev"),
     nextArrow: $(".olen-info-slider-wrap .olen-slider-navigation .slick-next"),
