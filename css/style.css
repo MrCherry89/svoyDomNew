@@ -5315,6 +5315,8 @@ body.mfp-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 1920px) {
   .olen-banner .img {
@@ -5326,29 +5328,30 @@ body.mfp-open {
     height: 70vw;
   }
 }
-
-.bottom-info {
+.olen-banner .bottom-info {
   width: 100%;
   background: #117169;
   padding: 30px 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
+  padding-top: 100px;
+  margin-top: -80px;
+  position: relative;
+  z-index: 0;
 }
 @media (max-width: 1024px) {
-  .bottom-info {
+  .olen-banner .bottom-info {
     padding: 20px 0;
+    padding-top: 60px;
     position: static;
     margin-top: -40px;
   }
 }
 @media (max-width: 767px) {
-  .bottom-info {
-    margin-top: -20px;
+  .olen-banner .bottom-info {
+    margin-top: -30px;
+    padding-top: 50px;
   }
 }
-.bottom-info .olen-wrapper {
+.olen-banner .bottom-info .olen-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5357,29 +5360,29 @@ body.mfp-open {
   align-items: center;
 }
 @media (max-width: 1024px) {
-  .bottom-info .olen-wrapper {
+  .olen-banner .bottom-info .olen-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
   }
 }
-.bottom-info .olen-wrapper .white-btn-olen {
+.olen-banner .bottom-info .olen-wrapper .white-btn-olen {
   max-width: 310px;
   width: 100%;
   margin-left: auto;
 }
 @media (max-width: 1300px) {
-  .bottom-info .olen-wrapper .white-btn-olen {
+  .olen-banner .bottom-info .olen-wrapper .white-btn-olen {
     max-width: 270px;
   }
 }
 @media (max-width: 1024px) {
-  .bottom-info .olen-wrapper .white-btn-olen {
+  .olen-banner .bottom-info .olen-wrapper .white-btn-olen {
     margin: 0 auto;
   }
 }
-.bottom-info .olen-wrapper .info {
+.olen-banner .bottom-info .olen-wrapper .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5389,45 +5392,45 @@ body.mfp-open {
   margin-right: 50px;
 }
 @media (max-width: 1300px) {
-  .bottom-info .olen-wrapper .info {
+  .olen-banner .bottom-info .olen-wrapper .info {
     margin-right: 30px;
   }
 }
 @media (max-width: 1024px) {
-  .bottom-info .olen-wrapper .info {
+  .olen-banner .bottom-info .olen-wrapper .info {
     margin: 0;
     margin-bottom: 10px;
   }
 }
-.bottom-info .olen-wrapper .info img {
+.olen-banner .bottom-info .olen-wrapper .info img {
   margin-right: 10px;
 }
-.bottom-info .olen-wrapper .info span {
+.olen-banner .bottom-info .olen-wrapper .info span {
   color: white;
   font-size: 24px;
 }
 @media (max-width: 1300px) {
-  .bottom-info .olen-wrapper .info span {
+  .olen-banner .bottom-info .olen-wrapper .info span {
     font-size: 18px;
   }
 }
 @media (max-width: 767px) {
-  .bottom-info .olen-wrapper .info span {
+  .olen-banner .bottom-info .olen-wrapper .info span {
     font-size: 16px;
   }
 }
-.bottom-info .olen-wrapper .info b {
+.olen-banner .bottom-info .olen-wrapper .info b {
   color: white;
   font-size: 24px;
   margin-left: 5px;
 }
 @media (max-width: 1300px) {
-  .bottom-info .olen-wrapper .info b {
+  .olen-banner .bottom-info .olen-wrapper .info b {
     font-size: 18px;
   }
 }
 @media (max-width: 767px) {
-  .bottom-info .olen-wrapper .info b {
+  .olen-banner .bottom-info .olen-wrapper .info b {
     font-size: 16px;
   }
 }
