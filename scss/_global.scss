@@ -4765,3 +4765,1145 @@ body.mfp-open {
     }
   }
 }
+
+.gakku-title {
+  font-family: "Leotaro";
+  max-width: 320px;
+  font-weight: normal !important;
+}
+
+.form-wrap2-gakku {
+  background: transparent;
+  .wrapper2 {
+    .gakku-form {
+      input {
+        height: 44px;
+        border-radius: 50px;
+        border: 1px solid #1a282a;
+        font-size: 14px;
+        font-weight: 600;
+        color: #1a282a;
+        background: transparent;
+        padding: 0 15px;
+        @include placeholder {
+          font-size: 16px;
+          font-weight: 600;
+          color: #999999;
+        }
+      }
+      button {
+        background: #1a282a;
+        color: white;
+        border-radius: 50px;
+        border: 1px solid #1a282a;
+        height: 44px;
+        font-size: 16px;
+        margin-top: 0;
+        &:hover {
+          background: transparent;
+          color: #1a282a;
+        }
+      }
+    }
+  }
+}
+
+.gakku-panorama {
+  background: #d9d9d9;
+  margin: 20px 0;
+  .panorama {
+    height: 500px;
+    width: 100%;
+    @include flex;
+    @include align-center;
+    @include justify-center;
+    font-size: 80px;
+    color: #000;
+    @media (max-width: 1024px) {
+      height: 400px;
+      font-size: 60px;
+    }
+    @media (max-width: 767px) {
+      height: 65vw;
+    }
+  }
+}
+
+.gakku-order-wrap {
+  padding: 40px 0;
+  .gakku-order {
+    padding: 60px;
+    background: #1a282a;
+    @media (max-width: 767px) {
+      padding: 40px 20px;
+    }
+    h2 {
+      font-family: "Leotaro";
+      text-align: center;
+      color: white;
+      font-size: 50px;
+      font-weight: normal;
+      margin-bottom: 40px;
+      @media (max-width: 767px) {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+    }
+    .gakku-order-form {
+      max-width: 410px;
+      width: 100%;
+      margin: 0 auto;
+      .input-wrap {
+        margin-bottom: 30px;
+        @media (max-width: 767px) {
+          margin-bottom: 20px;
+        }
+        > span {
+          display: block;
+          margin-bottom: 15px;
+          color: white;
+          @media (max-width: 767px) {
+            margin-bottom: 10px;
+          }
+        }
+      }
+      input {
+        width: 100%;
+        height: 44px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #1a282a;
+        padding: 0 20px;
+        @include placeholder {
+          font-size: 16px;
+          font-weight: 600;
+          color: #999999;
+        }
+      }
+      .border-btn {
+        width: 100%;
+        @media (max-width: 767px) {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.border-btn {
+  border: 1px solid #fff;
+  border-radius: 50px;
+  height: 44px;
+  @include inline-flex;
+  @include align-center;
+  @include justify-center;
+  padding: 0 20px;
+  color: white;
+  &:hover {
+    background: white;
+    color: #1a282a;
+  }
+}
+
+main.gakku-bg {
+  background: #f4f3ef;
+}
+
+.gakku-info-wrap,
+.gakku-near-info-wrap {
+  margin: 40px 0;
+  .wrapper2 {
+    > h2 {
+      font-family: "Leotaro";
+      font-size: 40px;
+      color: #1a282a;
+      font-weight: normal;
+      margin-bottom: 30px;
+      @media (max-width: 1024px) {
+        font-size: 34px;
+        max-width: 400px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 767px) {
+        font-size: 28px;
+      }
+    }
+  }
+  .main-slider-wrap2,
+  .main-slider-wrap {
+    position: relative;
+    .olen-slider-navigation {
+      button {
+        width: 56px;
+        height: 56px;
+        background: #1a282a;
+        opacity: 1;
+        @media (max-width: 767px) {
+          width: 44px;
+          height: 44px;
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+        img {
+          width: auto;
+          @media (max-width: 767px) {
+            width: 20px;
+          }
+        }
+        &.slick-prev {
+          @media (max-width: 767px) {
+            left: 10px;
+          }
+        }
+        &.slick-next {
+          @media (max-width: 767px) {
+            right: 10px;
+          }
+        }
+      }
+    }
+  }
+  .tabs {
+    display: flex;
+    @include justify-between;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #959e9f;
+    @media (max-width: 767px) {
+      @include dir-col;
+      border: none;
+      margin-bottom: 10px;
+    }
+  }
+
+  .tab2,
+  .tab,
+  .tab3 {
+    padding-bottom: 15px;
+    margin-bottom: -2px;
+    @include flex;
+    width: calc((100% - 40px) / 3);
+    position: relative;
+    cursor: pointer;
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #333;
+    }
+    span {
+      margin-top: auto;
+      max-width: 240px;
+      font-size: 18px;
+      text-transform: uppercase;
+      font-weight: normal;
+      color: #1a282a;
+      font-family: "Leotaro";
+      display: inline-block;
+      @media (max-width: 767px) {
+        max-width: 100%;
+        font-size: 16px;
+      }
+    }
+    &:after {
+      content: "";
+      height: 2px;
+      width: 100%;
+      background: #1a282a;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+      @media (max-width: 767px) {
+        content: none;
+      }
+    }
+  }
+
+  .tab2.active,
+  .tab.active,
+  .tab3.active {
+    position: relative;
+    &:after {
+      opacity: 1;
+    }
+    @media (max-width: 767px) {
+      span {
+        color: $green;
+      }
+    }
+  }
+
+  .tab-content,
+  .tab-content2,
+  .tab-content3 {
+    display: none;
+    animation: mymove 1s;
+    margin-bottom: 40px;
+    .texts {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
+      @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+      p {
+        font-size: 14px;
+        color: #1a282a;
+      }
+    }
+  }
+
+  .tab-content.active,
+  .tab-content2.active,
+  .tab-content3.active {
+    display: block;
+  }
+}
+
+.gakku-information2 {
+  background: #1a282a;
+  padding: 20px 0;
+  @media (max-width: 767px) {
+    padding: 30px 0;
+  }
+  .wrapper2 {
+    @include flex;
+    @include align-center;
+    @include justify-between;
+    @media (max-width: 767px) {
+      @include dir-col;
+    }
+    .border-btn {
+      margin-left: auto;
+      max-width: 210px;
+      width: 100%;
+      @media (max-width: 1024px) {
+        max-width: 180px;
+      }
+      @media (max-width: 767px) {
+        margin-left: 0;
+      }
+    }
+    .info-items {
+      @include flex;
+      @include justify-between;
+      flex-grow: 1;
+      margin-right: 80px;
+      @media (max-width: 1024px) {
+        margin-right: 20px;
+      }
+      @media (max-width: 767px) {
+        @include dir-col;
+        @include align-center;
+      }
+      .info-item {
+        @media (max-width: 767px) {
+          margin-bottom: 20px;
+        }
+        b {
+          font-weight: normal;
+          font-size: 32px;
+          font-family: "Leotaro";
+          color: white;
+          display: block;
+          @media (max-width: 1024px) {
+            font-size: 22px;
+          }
+          @media (max-width: 767px) {
+            text-align: center;
+            display: block;
+            font-size: 26px;
+            margin-bottom: 5px;
+          }
+        }
+        span {
+          font-size: 14px;
+          color: #f4f3ef;
+          @media (max-width: 767px) {
+            text-align: center;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.gakku-information {
+  background: #1a282a;
+  padding: 20px 0;
+  @media (max-width: 767px) {
+    padding: 30px 0;
+  }
+  .wrapper2 {
+    @include flex;
+    @include align-center;
+    @include justify-between;
+    @media (max-width: 767px) {
+      @include dir-col;
+      @include justify-center;
+    }
+    .gakku-white-btn {
+      max-width: 210px;
+      width: 100%;
+    }
+    .info {
+      @media (max-width: 767px) {
+        margin: 20px auto;
+      }
+      .address {
+        font-size: 14px;
+        color: #f4f3ef;
+      }
+      p {
+        font-size: 40px;
+        color: white;
+        font-family: "Leotaro";
+        span {
+          font-size: 40px;
+          color: white;
+          font-family: "Leotaro";
+          margin: 0 5px;
+        }
+      }
+    }
+  }
+}
+
+.gakku-white-btn {
+  border-radius: 50px;
+  @include inline-flex;
+  @include align-center;
+  @include justify-center;
+  background: white;
+  border: 1px solid #fff;
+  height: 36px;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 0 20px;
+  color: #1a282a;
+  &:hover {
+    background: #1a282a;
+    color: white;
+  }
+}
+
+.g-title {
+  font-weight: normal;
+  font-size: 40px;
+  color: #2b352c;
+  font-family: "Leotaro";
+  @media (max-width: 767px) {
+    font-size: 30px;
+  }
+}
+
+.gakku-architecture {
+  margin: 40px 0;
+  .wrapper2 {
+    .g-title {
+      margin-bottom: 40px;
+      @media (max-width: 767px) {
+        margin-bottom: 20px;
+      }
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.gakku-planing {
+  margin-bottom: 40px;
+  .wrapper2 {
+    .g-title {
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 14px;
+      color: #1a282a;
+      margin-bottom: 40px;
+    }
+    .gakku-planing-slider-wrap {
+      position: relative;
+      .slider-navigation {
+        button {
+          width: 56px;
+          height: 56px;
+          @include flex;
+          z-index: 10;
+          @media (max-width: 767px) {
+            width: 44px;
+            height: 44px;
+          }
+          &.slick-next {
+            right: 20px;
+            @media (max-width: 767px) {
+              right: 10px;
+            }
+          }
+          &.slick-prev {
+            left: 20px;
+            @media (max-width: 767px) {
+              left: 10px;
+            }
+            img {
+              transform: rotate(180deg);
+            }
+          }
+          &:before {
+            content: none;
+          }
+          img {
+            margin: auto;
+            @media (max-width: 767px) {
+              width: 20px;
+            }
+          }
+        }
+      }
+      .gakku-planing-slider {
+        .item {
+          @include flex;
+          background: #1a282a;
+          .img-wrap {
+            margin: auto;
+            @include flex;
+            @media (max-width: 767px) {
+              height: 50vw;
+            }
+            img {
+              max-width: 100%;
+              max-height: 100%;
+              margin: auto;
+              @media (max-width: 767px) {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.gakku-near {
+  margin: 40px 0;
+  .wrapper2 {
+    > img {
+      width: 100%;
+    }
+    .gakku-near-info {
+      margin: 40px 0;
+      .g-title {
+        margin-bottom: 20px;
+      }
+    }
+    .tab-content-wrap {
+      .gakku-near-items {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        @media (max-width: 1024px) {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+        @media (max-width: 767px) {
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+        .gakku-near-item {
+          @include flex;
+          .style {
+            margin-right: 20px;
+            @media (max-width: 767px) {
+              margin-right: 10px;
+            }
+          }
+          .info-texts {
+            .name {
+              font-size: 14px;
+              color: #1a282a;
+              margin-bottom: 5px;
+              display: block;
+              font-weight: 500;
+            }
+            .text {
+              font-size: 12px;
+              line-height: 16px;
+              display: inline-block;
+              font-weight: 300;
+              color: #1a282a;
+            }
+            .top {
+              @include flex;
+              align-items: flex-end;
+              margin-bottom: 3px;
+              .num {
+                color: #1a282a;
+                font-size: 36px;
+                line-height: 90%;
+                font-family: "Leotaro";
+                margin-right: 5px;
+              }
+              .min {
+                font-size: 18px;
+                font-family: "Leotaro";
+                color: #1a282a;
+              }
+            }
+          }
+        }
+      }
+    }
+    .tabs {
+      justify-content: flex-start;
+      width: auto;
+      max-width: inherit;
+      @include inline-flex;
+      @media (max-width: 767px) {
+        flex-direction: row;
+        width: 100%;
+      }
+      .tab3 {
+        width: auto;
+        min-width: 120px;
+        margin-right: 20px;
+        @media (max-width: 767px) {
+          margin-right: 0;
+          font-size: 18px;
+          min-width: auto;
+          width: 50%;
+          &:after {
+            content: "";
+            height: 1px;
+            background: $green;
+            border-radius: 50px;
+          }
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.gakku-advantages {
+  .g-title {
+    margin-bottom: 40px;
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+  .info-items {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    .info-item {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr;
+      .texts {
+        h3 {
+          font-weight: normal;
+          color: #1a282a;
+          font-size: 18px;
+          margin-bottom: 20px;
+          font-family: "Leotaro";
+          text-transform: uppercase;
+        }
+      }
+      .img-wrap {
+        @include flex;
+        img {
+          max-width: 100%;
+          max-height: 100%;
+          margin: auto;
+          @media (max-width: 1024px) {
+            width: 100%;
+          }
+        }
+      }
+      &.reverce {
+        @media (max-width: 1024px) {
+          @include flex;
+          flex-direction: column-reverse;
+        }
+      }
+    }
+  }
+}
+
+.gakku-select-apartment {
+  margin-top: 40px;
+  .wrapper2 {
+    @include flex;
+    @include justify-between;
+    @media (max-width: 767px) {
+      @include dir-col;
+    }
+    .img-wrap {
+      @include flex;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .info1 {
+      margin-top: auto;
+      @media (max-width: 767px) {
+        max-width: 470px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      p {
+        margin: 20px 0 30px;
+        font-size: 14px;
+        color: #1a282a;
+      }
+    }
+    .info2 {
+      margin: 0 20px;
+      @media (max-width: 767px) {
+        max-width: 470px;
+        margin: 20px auto;
+        width: 100%;
+      }
+    }
+    .info3 {
+      width: 280px;
+      @media (max-width: 767px) {
+        max-width: 470px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      .img-wrap {
+        margin-bottom: 30px;
+      }
+    }
+    .buttons {
+      max-width: 210px;
+      width: 100%;
+      a {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+
+.gakku-green-btn {
+  @include flex;
+  @include align-center;
+  @include justify-center;
+  border-radius: 50px;
+  background: #1a282a;
+  color: white;
+  height: 36px;
+  font-size: 14px;
+  line-height: 18px;
+  border: 1px solid #1a282a;
+  &:hover {
+    background: #fff;
+    color: #1a282a;
+  }
+}
+
+.gakku-border-btn {
+  @include flex;
+  @include align-center;
+  @include justify-center;
+  border-radius: 50px;
+  color: #1a282a;
+  border: 1px solid #1a282a;
+  height: 36px;
+  font-size: 14px;
+  line-height: 18px;
+  &:hover {
+    background: #1a282a;
+    color: white;
+  }
+}
+
+.gakku-drop-menu {
+  @include dir-col;
+  @include justify-center;
+  cursor: pointer;
+  display: none;
+
+  @media (max-width: 767px) {
+    @include flex;
+  }
+
+  .line {
+    width: 40px;
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    margin: 4px auto;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+.gakku-drop-menu.is-active .line:nth-child(3) {
+  opacity: 0;
+}
+
+.gakku-drop-menu.is-active .line:nth-child(1) {
+  -webkit-transform: translateY(12px) rotate(45deg);
+  -ms-transform: translateY(12px) rotate(45deg);
+  -o-transform: translateY(12px) rotate(45deg);
+  transform: translateY(12px) rotate(45deg);
+}
+
+.gakku-drop-menu.is-active .line:nth-child(2) {
+  -webkit-transform: translateY(1px) rotate(-45deg);
+  -ms-transform: translateY(1px) rotate(-45deg);
+  -o-transform: translateY(1px) rotate(-45deg);
+  transform: translateY(1px) rotate(-45deg);
+}
+
+.gakku-banner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  z-index: 3;
+  padding-top: 200px;
+  padding-bottom: 80px;
+  @media (max-width: 767px) {
+    padding-top: 140px;
+    padding-bottom: 60px;
+  }
+  &:after {
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.73) 95.31%,
+      #000 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  .gakku-banner-info {
+    .g-title {
+      margin-bottom: 20px;
+      color: white;
+    }
+    p {
+      max-width: 490px;
+      font-size: 14px;
+      color: white;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      max-width: 210px;
+      width: 100%;
+      a {
+        width: 100%;
+        margin-bottom: 15px;
+        font-size: 14px;
+        height: 36px;
+
+        &.border-btn {
+          border: 1px solid #f4f3ef;
+          background: rgba(0, 0, 0, 0.01);
+          backdrop-filter: blur(5.349999904632568px);
+          &:hover {
+            color: white;
+            background: #1a282a;
+          }
+        }
+      }
+    }
+  }
+  .gakku-banner-slider {
+    margin-top: 60px;
+    @media (max-width: 767px) {
+      margin-top: 30px;
+    }
+    .slick-dots {
+      @include flex;
+      left: calc((100% - 1080px) / 2) !important;
+      justify-content: flex-start;
+
+      @media (max-width: 1120px) {
+        left: 20px !important;
+      }
+      li {
+        &.slick-active {
+          button {
+            &:before {
+              background: $green;
+            }
+          }
+        }
+      }
+    }
+    .item {
+      width: 230px;
+      margin: 0 10px;
+      border: 1px solid transparent;
+      @include flex;
+      position: relative;
+      z-index: 0;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(black, 0.2);
+        transition: 0.3s;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+      &.slick-current {
+        border-color: white;
+        &:after {
+          background: rgba(black, 0);
+        }
+      }
+    }
+  }
+}
+
+.gakku-header {
+  padding: 15px 0;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.349999904632568px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  transition: 0.3s;
+  &.bg {
+    background: #1a282a;
+  }
+  .wrapper2 {
+    .top-info {
+      @include flex;
+      @include align-center;
+      @include justify-between;
+      margin-bottom: 20px;
+      @media (max-width: 767px) {
+        margin-bottom: 0;
+      }
+      .gakku-logo {
+        margin-left: 220px;
+        @media (max-width: 1024px) {
+          display: none;
+        }
+      }
+    }
+    .info {
+      @include flex;
+      @include align-center;
+      .social {
+        @include flex;
+        @include align-center;
+        @media (max-width: 767px) {
+          display: none;
+        }
+        li {
+          margin: 0 3px;
+        }
+      }
+      .gakku-white-btn {
+        margin-left: 10px;
+        min-width: 210px;
+        width: 100%;
+        @media (max-width: 767px) {
+          min-width: 130px;
+          font-size: 13px;
+        }
+      }
+    }
+    .gakku-main-menu {
+      @include flex;
+      @include justify-center;
+      @include align-center;
+      @media (max-width: 767px) {
+        display: none;
+      }
+      li {
+        margin: 0 15px;
+        a {
+          color: #fff;
+          text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 15.049px;
+        }
+      }
+    }
+    .gakku-mobile-menu {
+      position: absolute;
+      top: 85px;
+      left: 0;
+      width: 100%;
+      height: calc(100vh - 85px);
+      overflow-y: auto;
+      padding: 40px 20px;
+      background: #1a282a;
+      @include flex;
+      @include dir-col;
+      transition: 0.3s;
+      visibility: hidden;
+      transform: translateY(-100%);
+      opacity: 0;
+      &.open {
+        visibility: visible;
+        transform: translateY(0);
+        opacity: 1;
+      }
+      .gakku-main-menu-mobile {
+        margin-bottom: 40px;
+        li {
+          margin-bottom: 20px;
+          a {
+            font-size: 20px;
+            color: white;
+          }
+        }
+      }
+      .social {
+        margin-top: auto;
+        @include flex;
+        li {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+#gakku-popup,
+#gakku-popup2 {
+  max-width: 1050px;
+  width: 100%;
+  margin: 0 auto;
+  .popup-body {
+    position: relative;
+    z-index: 0;
+    .mfp-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 20px;
+      height: 20px;
+      @include flex;
+      &:after {
+        content: "";
+        background: url(../img/close-popup-grey.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+      }
+    }
+    .gakku-popup-wrap {
+      @include flex;
+      background: #f4f3ef;
+      .img-wrap {
+        width: 40%;
+        @include flex;
+        @media (max-width: 767px) {
+          display: none;
+        }
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      .form-wrap {
+        width: 60%;
+        padding: 70px;
+        @media (max-width: 767px) {
+          width: 100%;
+          padding: 50px 20px;
+        }
+        form {
+          max-width: 410px;
+          width: 100%;
+          margin: 0 auto;
+          .gakku-green-btn {
+            background: #1a282a;
+            color: white;
+            border-radius: 50px;
+            border: 1px solid #1a282a;
+            height: 44px;
+            font-size: 16px;
+            width: 100%;
+          }
+          .input-wrap {
+            margin-bottom: 30px;
+            span {
+              display: block;
+              font-size: 14px;
+              margin-bottom: 15px;
+              color: #1a282a;
+            }
+            input {
+              border: 1px solid #1a282a;
+              border-radius: 50px;
+              padding: 0 20px;
+              width: 100%;
+              background: transparent;
+              height: 44px;
+              color: #1a282a;
+              @include placeholder {
+                color: #999999;
+              }
+            }
+          }
+        }
+        h3 {
+          text-align: center;
+          margin-bottom: 60px;
+          font-size: 30px;
+          color: #000;
+          font-weight: normal;
+          font-family: "Leotaro";
+          @media (max-width: 767px) {
+            font-size: 24px;
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+}
