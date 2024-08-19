@@ -731,38 +731,6 @@ $(document).ready(function () {
     });
   });
 
-  $(".tab2").on("click", function () {
-    var tabId = $(this).data("tab");
-
-    $(".tab2").removeClass("active");
-    $(this).addClass("active");
-
-    $(".tab-content2").removeClass("active");
-    $('.tab-content2[data-content="' + tabId + '"]').addClass("active");
-  });
-
-  // Устанавливаем активную первую вкладку по умолчанию
-  $(".tab2:first").addClass("active");
-  $(".tab-content2:first").addClass("active");
-
-  const tabButtons2 = document.querySelectorAll(".tab-button");
-  const tabPanes2 = document.querySelectorAll(".tab-pane");
-
-  tabButtons2.forEach((button) => {
-    button.addEventListener("click", () => {
-      const targetTab = button.getAttribute("data-tab");
-
-      tabButtons2.forEach((btn) => btn.classList.remove("active"));
-      tabPanes2.forEach((pane) => {
-        pane.classList.remove("active");
-        pane.classList.remove("fade-in");
-      });
-
-      button.classList.add("active");
-      document.getElementById(targetTab).classList.add("active", "fade-in");
-    });
-  });
-
   $(".tab3").on("click", function () {
     var tabId = $(this).data("tab");
 
@@ -780,7 +748,7 @@ $(document).ready(function () {
   const tabButtons3 = document.querySelectorAll(".tab-button");
   const tabPanes3 = document.querySelectorAll(".tab-pane");
 
-  tabButtons2.forEach((button) => {
+  tabButtons3.forEach((button) => {
     button.addEventListener("click", () => {
       const targetTab = button.getAttribute("data-tab");
 
@@ -822,6 +790,32 @@ $(document).ready(function () {
           centerMode: true,
           centerPadding: "40px",
           slidesToShow: 1,
+        },
+      },
+    ],
+  });
+
+  $(".gakku-tab-slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: false,
+    focusOnSelect: true,
+    // autoplay: true,
+    // autoplaySpeed: 2000,
+    // cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: true,
         },
       },
     ],
