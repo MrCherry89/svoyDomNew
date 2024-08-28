@@ -801,9 +801,9 @@ $(document).ready(function () {
     dots: false,
     arrows: false,
     focusOnSelect: true,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
-    // cssEase: "linear",
+    autoplay: true,
+    autoplaySpeed: 2000,
+    cssEase: "linear",
     responsive: [
       {
         breakpoint: 1025,
@@ -892,4 +892,67 @@ $(document).ready(function () {
   });
 
   AOS.init();
+
+  $(".d-slider").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: "linear",
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $(".d-tab-slider-wrap .slider-navigation .slick-prev"),
+    nextArrow: $(".d-tab-slider-wrap .slider-navigation .slick-next"),
+  });
+
+  $(".d-slider2").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: "linear",
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $(".d-tab-slider-wrap2 .slider-navigation .slick-prev"),
+    nextArrow: $(".d-tab-slider-wrap2 .slider-navigation .slick-next"),
+  });
+
+  $(".d-slider3").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: "linear",
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $(".d-tab-slider-wrap3 .slider-navigation .slick-prev"),
+    nextArrow: $(".d-tab-slider-wrap3 .slider-navigation .slick-next"),
+  });
+
+  $(".d-information-slider").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $(".d-information-slider-wrap .slider-navigation .slick-prev"),
+    nextArrow: $(".d-information-slider-wrap .slider-navigation .slick-next"),
+    speed: 700,
+    cssEase: "ease-in-out",
+  });
+
+  $(".d-information-slider2").slick({
+    dots: false,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $(".d-information-slider-wrap2 .slider-navigation .slick-prev"),
+    nextArrow: $(".d-information-slider-wrap2 .slider-navigation .slick-next"),
+    speed: 700,
+    cssEase: "ease-in-out",
+  });
 });
