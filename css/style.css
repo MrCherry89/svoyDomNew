@@ -7479,9 +7479,6 @@ main.gakku-bg {
   font-size: 13px;
   border: 1px solid #12284d;
 }
-.d-blue-btn2:hover {
-  background: #1c3d76;
-}
 .d-blue-btn2 img,
 .d-blue-btn2 svg {
   margin-left: 8px;
@@ -7710,6 +7707,12 @@ main.gakku-bg {
     padding: 20px;
   }
 }
+@media (max-width: 767px) {
+  .d-video-info .info-wrap .d-blue-btn {
+    max-width: 370px;
+    width: 100%;
+  }
+}
 .d-video-info .info-wrap .info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7779,8 +7782,9 @@ main.gakku-bg {
 }
 @media (max-width: 767px) {
   .d-tab-wrap .wrapper2 .tab-menu li button {
-    font-size: 18px;
+    font-size: 16px;
     padding: 6px 20px;
+    height: auto;
   }
 }
 .d-tab-wrap .wrapper2 .tab-menu li.active button {
@@ -7843,13 +7847,6 @@ main.gakku-bg {
 .d-tab-slider-wrap3 .slider-navigation button.slick-prev {
   left: 20px;
 }
-@media (max-width: 767px) {
-  .d-tab-slider-wrap .slider-navigation button.slick-prev,
-.d-tab-slider-wrap2 .slider-navigation button.slick-prev,
-.d-tab-slider-wrap3 .slider-navigation button.slick-prev {
-    left: -10px;
-  }
-}
 .d-tab-slider-wrap .slider-navigation button.slick-prev img,
 .d-tab-slider-wrap2 .slider-navigation button.slick-prev img,
 .d-tab-slider-wrap3 .slider-navigation button.slick-prev img {
@@ -7859,13 +7856,6 @@ main.gakku-bg {
 .d-tab-slider-wrap2 .slider-navigation button.slick-next,
 .d-tab-slider-wrap3 .slider-navigation button.slick-next {
   right: 20px;
-}
-@media (max-width: 767px) {
-  .d-tab-slider-wrap .slider-navigation button.slick-next,
-.d-tab-slider-wrap2 .slider-navigation button.slick-next,
-.d-tab-slider-wrap3 .slider-navigation button.slick-next {
-    right: -10px;
-  }
 }
 .d-tab-slider-wrap .d-slider .item .img-wrap,
 .d-tab-slider-wrap .d-slider2 .item .img-wrap,
@@ -7943,7 +7933,7 @@ main.gakku-bg {
 @media (max-width: 767px) {
   .d-advantages .wrapper2 .d-title {
     font-size: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 .d-advantages .wrapper2 .info-items .info-item {
@@ -7960,6 +7950,10 @@ main.gakku-bg {
   .d-advantages .wrapper2 .info-items .info-item {
     flex-direction: column-reverse;
   }
+}
+.d-advantages .wrapper2 .info-items .info-item .img-wrap {
+  border-radius: 20px;
+  overflow: hidden;
 }
 .d-advantages .wrapper2 .info-items .info-item .texts {
   margin-top: 20px;
@@ -7985,6 +7979,11 @@ main.gakku-bg {
 .d-advantages .wrapper2 .info-items .info-item .texts h3 {
   font-weight: 500;
   color: #12284d;
+}
+@media (max-width: 767px) {
+  .d-advantages .wrapper2 .info-items .info-item .texts h3 {
+    margin-bottom: 10px;
+  }
 }
 
 .d-form-wrap2 {
@@ -8087,6 +8086,7 @@ main.gakku-bg {
 @media (max-width: 767px) {
   .d-planning-solutions .wrapper2 .planning-solutions-wrap .right {
     padding-bottom: 20px;
+    padding-top: 30px;
   }
 }
 .d-planning-solutions .wrapper2 .planning-solutions-wrap .right .arrow-wrap {
@@ -8103,13 +8103,21 @@ main.gakku-bg {
 }
 @media (max-width: 767px) {
   .d-planning-solutions .wrapper2 .planning-solutions-wrap .right .arrow-wrap {
-    display: none;
+    max-width: 170px;
+    width: 100%;
+    margin: 10px auto 0;
   }
 }
 .d-planning-solutions .wrapper2 .planning-solutions-wrap .right h2 {
   font-family: "Gilroy";
   font-weight: normal;
   color: #12284d;
+  text-transform: inherit;
+}
+@media (max-width: 767px) {
+  .d-planning-solutions .wrapper2 .planning-solutions-wrap .right h2 {
+    margin-bottom: 30px;
+  }
 }
 .d-planning-solutions .wrapper2 .planning-solutions-wrap .right .slider-navigation {
   background: transparent;
@@ -8404,7 +8412,7 @@ main.gakku-bg {
   }
 }
 .d-information .wrapper2 .info .text-wrap p {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   font-size: 16px;
   font-family: "Gilroy";
   font-weight: 300;
@@ -8418,16 +8426,16 @@ main.gakku-bg {
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-.d-information .wrapper2 .info .text-wrap .buttons a {
+.d-information .wrapper2 .info .text-wrap .buttons div {
   margin-right: 10px;
   margin-bottom: 10px;
 }
 @media (max-width: 767px) {
-  .d-information .wrapper2 .info .text-wrap .buttons a {
+  .d-information .wrapper2 .info .text-wrap .buttons div {
     padding: 8px 12px;
   }
 }
-.d-information .wrapper2 .info .text-wrap .buttons a img {
+.d-information .wrapper2 .info .text-wrap .buttons div img {
   margin-right: 10px;
   margin-left: 0;
 }

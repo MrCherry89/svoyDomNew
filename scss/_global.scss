@@ -6094,9 +6094,6 @@ main.gakku-bg {
   font-family: "Gilroy";
   font-size: 13px;
   border: 1px solid #12284d;
-  &:hover {
-    background: lighten(#12284d, 10%);
-  }
   img,
   svg {
     margin-left: 8px;
@@ -6274,6 +6271,12 @@ main.gakku-bg {
     @media (max-width: 767px) {
       padding: 20px;
     }
+    .d-blue-btn {
+      @media (max-width: 767px) {
+        max-width: 370px;
+        width: 100%;
+      }
+    }
     .info {
       @include flex;
       @include dir-col;
@@ -6330,8 +6333,9 @@ main.gakku-bg {
           border-radius: 20px 20px 0 0;
           font-family: "Gilroy";
           @media (max-width: 767px) {
-            font-size: 18px;
+            font-size: 16px;
             padding: 6px 20px;
+            height: auto;
           }
         }
         &.active {
@@ -6383,18 +6387,12 @@ main.gakku-bg {
       }
       &.slick-prev {
         left: 20px;
-        @media (max-width: 767px) {
-          left: -10px;
-        }
         img {
           transform: rotate(180deg);
         }
       }
       &.slick-next {
         right: 20px;
-        @media (max-width: 767px) {
-          right: -10px;
-        }
       }
     }
   }
@@ -6445,7 +6443,7 @@ main.gakku-bg {
       }
       @media (max-width: 767px) {
         font-size: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
       }
     }
     .info-items {
@@ -6455,6 +6453,10 @@ main.gakku-bg {
         @include dir-col;
         @media (max-width: 767px) {
           flex-direction: column-reverse;
+        }
+        .img-wrap {
+          border-radius: 20px;
+          overflow: hidden;
         }
         .texts {
           margin-top: 20px;
@@ -6479,6 +6481,9 @@ main.gakku-bg {
           h3 {
             font-weight: 500;
             color: #12284d;
+            @media (max-width: 767px) {
+              margin-bottom: 10px;
+            }
           }
         }
       }
@@ -6596,6 +6601,7 @@ main.gakku-bg {
         padding-bottom: 40px;
         @media (max-width: 767px) {
           padding-bottom: 20px;
+          padding-top: 30px;
         }
         .arrow-wrap {
           @include flex;
@@ -6603,13 +6609,19 @@ main.gakku-bg {
           @include justify-between;
           margin-top: 30px;
           @media (max-width: 767px) {
-            display: none;
+            max-width: 170px;
+            width: 100%;
+            margin: 10px auto 0;
           }
         }
         h2 {
           font-family: "Gilroy";
           font-weight: normal;
           color: #12284d;
+          text-transform: inherit;
+          @media (max-width: 767px) {
+            margin-bottom: 30px;
+          }
         }
         .slider-navigation {
           background: transparent;
@@ -6875,7 +6887,7 @@ main.gakku-bg {
           }
         }
         p {
-          margin-bottom: 40px;
+          margin-bottom: 20px;
           font-size: 16px;
           font-family: "Gilroy";
           font-weight: 300;
@@ -6884,7 +6896,7 @@ main.gakku-bg {
         .buttons {
           @include flex;
           @include flex-wrap;
-          a {
+          div {
             margin-right: 10px;
             margin-bottom: 10px;
             @media (max-width: 767px) {
